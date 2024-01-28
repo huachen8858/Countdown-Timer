@@ -55,11 +55,11 @@ function startCountdown() {
     const initialSecs = Math.floor((setTime / 1000) % 60);
 
     timer.innerHTML = `
-      <div>${initialHrs}</div>
+      <div>${initialHrs < 10 ? '0' : ''}${initialHrs}</div>
       <div class="colon">:</div>
-      <div>${initialMins}</div>
+      <div>${initialMins < 10 ? '0' : ''}${initialMins}</div>
       <div class="colon">:</div>
-      <div>${initialSecs === 0 ? initialSecs : initialSecs - 1}</div>
+      <div>${(initialSecs < 10 ? '0' : '')}${initialSecs === 0 ? initialSecs : initialSecs - 1}</div>
     `;
 
     // 清除input
@@ -112,11 +112,11 @@ function startCountdown() {
       const secs = Math.floor((remainingTime / 1000) % 60);
 
       timer.innerHTML = `
-        <div>${hrs}</div>
-        <div class="colon">:</div>
-        <div>${mins}</div>
-        <div class="colon">:</div>
-        <div>${secs}</div>
+      <div>${hrs < 10 ? "0" : ""}${hrs}</div>
+      <div class="colon">:</div>
+      <div>${mins < 10 ? "0" : ""}${mins}</div>
+      <div class="colon">:</div>
+      <div>${secs < 10 ? "0" : ""}${secs}</div>
         `;
 
       // --- 5sec-condition ---
@@ -134,6 +134,10 @@ function startCountdown() {
         semicircles[0].style.display = "none";
         semicircles[1].style.display = "none";
         semicircles[2].style.display = "none";
+
+        hrInput.disabled = false;
+        minInput.disabled = false;
+        secInput.disabled = false;
 
         // 4.倒數完設為 00:00:00 顏色變灰色
         timer.innerHTML = `
