@@ -9,6 +9,51 @@ html {
   font-family: "Gabarito", sans-serif;
   color: #2a4e85;
 }
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 200px;
+  gap: 10px;
+  font-size: 2.5em;
+}
+.setting-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+input {
+  height: 30px;
+  font-size: 1rem;
+  border: #2a4e85 2px solid;
+  border-radius: 5px;
+  width: 120px;
+  height: 32px;
+  padding: 2px 5px;
+}
+.start-btn {
+  background-color: #2a4e85;
+  border: none;
+  border-radius: 10px;
+  width: 100px;
+  height: 33px;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.start-btn:hover {
+  box-shadow: 0 0 8px rgba(198, 189, 189, 0.7);
+}
+.undo {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .center {
   display: flex;
   justify-content: center;

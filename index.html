@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
   <link rel="stylesheet" href="/css/style.css">
   <title>Countdown Timer</title>
 </head>
 <body>
+  <div class="title">SET COUNTDOWN TIME: 
+    <div class="setting-box">
+    <input class="hr" type="number" placeholder="Hours" max="24">
+    <input class="min" type="number" placeholder="Minutes" max="60">
+    <input class="sec" type="number" placeholder="Seconds" max="60">
+    <button class="start-btn">START</button>
+    <i class="fas fa-undo-alt undo"></i>
+  </div>
+  </div>
   <div class="main-container center">
     <!-- progress indicator -->
     <div class="circle-container center">
